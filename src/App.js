@@ -65,7 +65,7 @@ changeName=(event)=>{
   <div>
      <HomePage/>
     {/* <Next namee={this.state.cars[0].name} age={this.state.cars[0].age}/>  */}
-    <Next products={this.state.cars}/>
+    {/* <Next products={this.state.cars}/> */}
     {/* <button className="btn btn-primary mx-auto d-block" onClick={this.changeData.bind(this,"asmaa")}>change</button> */}
   {/* <input type="text" className="form-control" onChange={this.changeName}></input> */}
  

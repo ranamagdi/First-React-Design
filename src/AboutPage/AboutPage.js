@@ -6,14 +6,14 @@ import { Col, Container, Row,Card,CardBody,CardTitle,CardText} from "reactstrap"
 
 class AboutPage extends Component{
     state={
-        products:[]
+        product:[]
     }
     componentDidMount(){
-        axios.get('https://forkify-api.herokuapp.com/api/search?q=pizza')
+        axios.get('https://dummyjson.com/products')
         .then((result)=>{
             this.setState(
                 {
-                    products:result.data.recipes
+                    product:result.data.products
                 }
             )
         })
@@ -21,20 +21,20 @@ class AboutPage extends Component{
     render(){
         return(
             <div>
-               <Navbar/>
+               <Navbar/>            
                <Container>
                 <Row>
-                {this.state.products.map((item)=>
-                <Col md="4">
+                {this.state.product.map((item)=>
+                <Col className="mt-5">
                     <Card className="card_style">
-                        <img src={item.image_url}/>
+                        <img src={item.thumbnail}/>
                         <CardBody>
                             <CardTitle tag="h5">
                            {item.title}
                             </CardTitle>
                         
                             <CardText tag="h6">
-                            {item.publisher}
+                            {item.description}
                             </CardText>
                          </CardBody>
                         </Card>
