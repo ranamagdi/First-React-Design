@@ -2,7 +2,7 @@ import React from "react";
 
 function Device(){
     return(
-        <div>
+        <div id="device_id">
             <div className="device">
         <div className="contianer">
             <div className="row align-content-center d-flex">

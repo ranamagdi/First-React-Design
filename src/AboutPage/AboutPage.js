@@ -2,6 +2,7 @@ import { Component } from "react";
 import Navbar from "../HomePages/Navbar";
 import axios from "axios";
 import { Col, Container, Row,Card,CardBody,CardTitle,CardText} from "reactstrap";
+import { CartProvider } from "react-use-cart";
 
 
 class AboutPage extends Component{
@@ -9,7 +10,7 @@ class AboutPage extends Component{
         product:[]
     }
     componentDidMount(){
-        axios.get('https://dummyjson.com/products')
+        axios.get('../js/api.json')
         .then((result)=>{
             this.setState(
                 {
@@ -20,7 +21,7 @@ class AboutPage extends Component{
     }
     render(){
         return(
-            <div>
+            <CartProvider>
                <Navbar/>            
                <Container>
                 <Row>
@@ -44,7 +45,7 @@ class AboutPage extends Component{
                 </Row>
                </Container>
             
-            </div>
+            </CartProvider>
         )
     }
 }

@@ -12,6 +12,8 @@ import {
 import Features from "./FeaturesPage/Features";
 import DownloadPage from "./DownloadPage/DownloadPage";
 import AboutPage from './AboutPage/AboutPage';
+import ProductPage from './ProductPage/ProductPage';
+import CartPage from './CartPage/CartPage';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: "about",
     element: <AboutPage/>,
+  },
+  {
+    path: "product",
+    element: <ProductPage/>,
+  },
+  {
+    path: "cart",
+    element: <CartPage/>,
   },
 
 ]);
